@@ -1,0 +1,46 @@
+@import 'reset';
+
+header{
+    background-color: #61B4CF;
+    .navbar-brand{
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
+
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.form{
+    input{
+        margin: 0 10px;
+        &:focus{
+            border-color: #024E68;
+            box-shadow: none;
+        }
+    }
+    .searchBtn{
+        background-color: #06799F;
+        color:#fff;
+        font-weight: 600;
+        &:hover{
+            background-color: #216278;
+        }
+    }
+}
+
+.film-section{
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.card{
+    border-color: #024E68;
+    &-header{
+        background-color:#024E68;
+    }
+}
