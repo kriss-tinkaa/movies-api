@@ -36,7 +36,8 @@ window.onload = function () {
   function showMovies(films){
     films.results.forEach(film => {
       const timeMoon = Date.parse(`${film.release_date}`);
-      console.log(timeMoon)
+      const timeMoonURL = urlMoonPhase + timeMoon;
+      console.log(timeMoonURL)
       mainContent+=`
       <div class="col-lg-4 col-md-6 col-sm-1 film-heroku my-3">
         <div class="card">
@@ -55,7 +56,7 @@ window.onload = function () {
       });
       console.log(films);
       main.innerHTML = mainContent;
-      getMoon(timeMoon);
+      getMoon(timeMoonURL);
   }
 };
 
