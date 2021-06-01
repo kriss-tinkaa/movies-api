@@ -9,6 +9,7 @@ window.onload = function () {
   const searchTerm = document.querySelector('.searchTerm');
   const filmCard = document.querySelector('.filmCard');
   let mainContent = '';
+  let main = document.querySelector('#films');
 
 
   searchBtn.onclick = function (e) {
@@ -34,9 +35,8 @@ window.onload = function () {
   }
   function showMovies(films){
     films.results.forEach(film => {
-      var timeMoon = Date.parse(`${film.release_date}`);
-      var timeMoonUrl = urlMoonPhase + timeMoon;
-      console.log(timeMoonUrl)
+      const timeMoon = Date.parse(`${film.release_date}`);
+      console.log(timeMoon)
       mainContent+=`
       <div class="col-lg-4 col-md-6 col-sm-1 film-heroku my-3">
         <div class="card">
@@ -55,7 +55,7 @@ window.onload = function () {
       });
       console.log(films);
       main.innerHTML = mainContent;
-      getMoon(timeMoonUrl);
+      getMoon(timeMoon);
   }
 };
 
